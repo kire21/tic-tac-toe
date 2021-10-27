@@ -12,24 +12,71 @@
       <h1 class="heading">TIC - TAC - TOE</h1>
     </header>
     <main class="main">
-      <div class="play__display grid grid--3x3">
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
+      <section class="welcome">
+        <div class="register">
+          <form action="submit">
+            <div class="player player__one">
+              <label class="label" for="player1">Player X</label>
+              <input
+                class=""
+                type="text"
+                id="player1"
+                placeholder="Enter you name"
+                value=""
+                required
+              />
+            </div>
+            <div class="player player__two">
+              <label class="label" for="player2">Player O</label>
+              <input 
+              type="text" 
+              id="player2" 
+              placeholder="Enter you name" 
+              value="" 
+              required
+              />
+            </div>
+          </div>
+          <div class="start__game">
+            <button class="btn btn__play">Play</button>
+          </div>
+          </form>
+      </section>
+      <section class="show player__name--score hidden">
+        <div class="display__player">
+          <div>
+            <h2 class="player__one--name"></h2>
+            <h3 class="player__one--score"></h3>
+          </div>
+          
+          <div>
+            <h2 class="player__two--name"></h2>
+            <h3 class="player__two--score"></h3>
+          </div>
+        </div>
+      </section>
+      <section class="board grid grid--3x3 hidden">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </section>
+      <div class="show__active--player">
+        <h2 class="active--player"></h2>
       </div>
-      <div class="start">
-        <button class="btn btn__start">Start</button>
+      <div class="winning-message restart">
+        <h2 class="message"></h2>
+        <button class="btn btn__restart">Rematch</button>
       </div>
     </main>
 
     <footer class="footer">
-      <div>
+      <div class="source hidden">
         Icons made by
         <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
         <a href="https://www.flaticon.com/" title="Flaticon"

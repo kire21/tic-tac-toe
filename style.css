@@ -50,41 +50,101 @@ body {
   font-weight: 900;
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (min-width: 480px) {
   .heading {
     font-size: 4.5rem;
   }
 }
 
+/* Welcome */
+
+.welcome {
+  text-align: center;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.label {
+  margin: 1.5rem 0;
+}
+
+input {
+  padding: 1rem;
+  font-size: 2rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/* Player Display */
+
+.display__player {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4rem 2rem 4rem;
+}
+
 /* Play Display */
 
-.play__display {
+.board {
   width: 300px;
   height: 300px;
   margin: 0 auto;
 }
 
-.block {
+.cell {
   background: black;
   border-right: 5px solid var(--color-background);
   border-bottom: 5px solid var(--color-background);
 }
 
-.start {
+.x {
+  background-image: url(./images/pick-x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+.o {
+  background-image: url(./images/pick-o.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+.restart {
+  text-align: center;
+}
+
+.show__active--player {
+  margin-top: 2rem;
   text-align: center;
 }
 
 @media screen and (min-width: 480px) {
-  .play__display {
+  .board {
     width: 400px;
     height: 400px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .play__display {
-    width: 600px;
-    height: 600px;
+  .board {
+    width: 500px;
+    height: 500px;
   }
 }
 
@@ -107,13 +167,33 @@ body {
 /* Footer */
 
 .footer {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   text-align: center;
-  bottom: 0;
+  /* bottom: 0; */
   width: 100%;
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.winning-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background);
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 5rem;
+  flex-direction: column;
+}
+
+.winning-message.show {
+  display: flex;
 }
